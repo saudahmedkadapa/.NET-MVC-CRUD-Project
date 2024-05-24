@@ -1,0 +1,47 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    <title>Edit</title>
+</head>
+<body>
+
+    <form action="/Test/AfterEdit" method="POST" role="form" >
+        <legend style="margin-left:10px">
+            Edit @Model.Name 's Records</legend>
+
+            <div class="form-group">
+                <label for="Id"style="margin-left:10px">Id</label>
+                <input type="hidden" style="margin-left:10px" class="form-control" id="Id" name="Id" value="@Model.Id" placeholder="Input field">
+            </div>
+
+            <div class="form-group">
+                <label for="Id" style="margin-left:10px">Name</label>
+                <input type="text" style="margin-left:10px" class="form-control" id="Name" name="Name" value="@Model.Name" placeholder="Input field">
+            </div>
+
+            <div class="form-group">
+                <label for="Id" style="margin-left:10px">Address</label>
+                <input type="text" style="margin-left:10px" class="form-control" id="Address" name="Address" value="@Model.Address" placeholder="Input field">
+            </div>
+        <br />
+
+
+
+
+
+            <button type="submit" class="btn btn-primary">Update</button>
+</form>
+
+
+</body>
+</html>

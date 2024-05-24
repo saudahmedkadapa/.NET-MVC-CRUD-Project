@@ -1,0 +1,49 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+
+    <title>Show</title>
+</head>
+<body> 
+    <br />
+    <br />
+    <a href="/Test/Create" class="btn btn-success" style="margin-left:10px">Create a New Record</a>
+    <br />
+    <br />
+    <div class="table-responsive">
+        <table class="table">
+
+            <tr>
+                <td><b>Id</b></td>
+                <td><b>Name</b></td>
+                <td><b>Address</b></td>
+            </tr>
+            @foreach (var emp in Model)
+            {
+                <tr>
+                    <td>@emp.Id</td>
+                    <td>@emp.Name</td>
+                    <td>@emp.Address</td>
+                    <td>
+                        <a class="btn btn-warning" href="/Test/Edit/@emp.Id">Edit</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-danger" href="/Test/Delete/@emp.Id">Delete</a>
+                    </td>
+
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

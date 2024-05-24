@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    <title>Error</title>
+</head>
+<body>
+    <div>
+        <h1>Something is not Right Here ...Please try Again after some time</h1>
+        <h6>
+            Technical Details:
+        </h6>
+        <p>@Model.Message</p>
+        <br />
+        <a href="/Test/Show" class="btn btn-info"> &lt-Go home Page </a>
+    </div>
+</body>
+</html>
